@@ -7,60 +7,60 @@ import Link from "next/link";
 import Image from "next/image";
 import { Paragraph } from "./Paragraph";
 import { motion } from "framer-motion";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export const Products = () => {
   return (
-    <div>
-      <div className="grid grid-cols-1  gap-10">
+    <div className="w-full">
+      <div className="grid grid-cols-1 gap-6 w-full">
         {products.map((product: Product, idx: number) => (
           <motion.div
             key={product.href}
-            initial={{
-              opacity: 0,
-              x: -50,
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-            }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.2, delay: idx * 0.1 }}
           >
-            <Link
-              href={product.slug ? `/projects/${product.slug}` : product.href}
-              key={product.href}
-              className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 rounded-2xl transition duration-200 pt-4"
+            <HoverBorderGradient
+              className="group flex flex-col bg-transparent md:flex-row space-y-4 md:space-y-0 md:space-x-4 rounded-xl transition duration-200 pt-2 w-full"
+              containerClassName="w-full bg-transparent border border-white/10 bg-transparent hover:bg-transparent"
+              duration={0.5}
             >
-              <Image
-                src={product.thumbnail}
-                alt="thumbnail"
-                height="200"
-                width="200"
-                className="rounded-md"
-              />
-              <div className="flex flex-col justify-between">
-                <div>
-                  <Heading
-                    as="h4"
-                    className="font-black text-lg md:text-lg lg:text-lg "
-                  >
-                    {product.title}
-                  </Heading>
-                  <Paragraph className="text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
-                    {product.description}
-                  </Paragraph>
-                </div>
-                <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
-                  {product.stack?.map((stack: string) => (
-                    <span
-                      key={stack}
-                      className="text-xs  md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+              <Link
+                href={product.slug ? `/projects/${product.slug}` : product.href}
+                className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 w-full"
+              >
+                <Image
+                  src={product.thumbnail}
+                  alt="thumbnail"
+                  width={150}
+                  height={150}
+                  className="rounded-lg object-cover min-w-[150px] max-w-[150px]"
+                />
+                <div className="flex flex-col justify-between w-full relative z-10">
+                  <div>
+                    <Heading
+                      as="h4"
+                      className="font-black text-stone-400 md:text-lg lg:text-lg"
                     >
-                      {stack}
-                    </span>
-                  ))}
+                      {product.title}
+                    </Heading>
+                    <Paragraph className="text-sm mt-2 text-left">
+                      {product.description}
+                    </Paragraph>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {product.stack?.map((stack: string) => (
+                      <span
+                        key={stack}
+                        className="text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+                      >
+                        {stack}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </HoverBorderGradient>
           </motion.div>
         ))}
       </div>

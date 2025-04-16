@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/Footer";
+import { StarsBackground } from "@/components/ui/stars-background";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,8 +13,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Dava Rajif - Developer",
-  description:
-    "",
+  description: "",
 };
 
 export default function RootLayout({
@@ -26,12 +26,18 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.className,
-          "flex antialiased h-screen overflow-hidden bg-gray-100"
+          "flex antialiased h-screen overflow-hidden relative m-0 p-0"
         )}
       >
+        {/* Stars background di belakang semua */}
+        <StarsBackground />
+
+        {/* Sidebar tetap di kiri */}
         <Sidebar />
-        <div className="lg:pl-2 lg:pt-2 bg-gray-100 flex-1 overflow-y-auto">
-          <div className="flex-1 bg-white min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 overflow-y-auto">
+
+        {/* Konten utama */}
+        <div className="flex-1 overflow-y-auto relative z-10">
+          <div className="min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 backdrop-blur-sm bg-black/30">
             {children}
             <Footer />
           </div>

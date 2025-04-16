@@ -8,11 +8,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export const SingleProduct = ({ product }: { product: Product }) => {
-  const [activeImage, setActiveImage] = useState<StaticImageData | string>(
-    product.thumbnail
-  );
+  const [activeImage, setActiveImage] = useState<StaticImageData | string>(product.thumbnail);
+
   return (
-    <div className="py-10">
+    <div className="py-10 bg-transparent"> {/* Menambahkan bg-transparent di sini */}
       <motion.div
         initial={{
           opacity: 0,
@@ -26,7 +25,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           duration: 0.5,
         }}
         key={product.slug}
-        className="relative"
+        className="relative bg-transparent" // Pastikan di sini juga bg-transparent
       >
         <Image
           src={activeImage}
@@ -35,7 +34,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           width="1000"
           className="rounded-md object-contain max-h-96"
         />
-        <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
+        <div className="absolute bottom-0 bg-transparent h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" /> {/* bg-transparent */}
       </motion.div>
       <div className="flex flex-row justify-center my-8 flex-wrap">
         {product.images.map((image, idx) => (
@@ -99,3 +98,4 @@ export const SingleProduct = ({ product }: { product: Product }) => {
     </div>
   );
 };
+
