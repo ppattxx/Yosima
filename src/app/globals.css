@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tambahkan ini di atas atau bawah import Tailwind */
 html,
 body {
   margin: 0;
