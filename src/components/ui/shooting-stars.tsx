@@ -13,76 +13,45 @@ interface ShootingStar {
 }
 
 interface ShootingStarsProps {
-  minSpeed?: 20;
-  maxSpeed?: 30;
-  minDelay?: 3000;
-  maxDelay?: 7000;
+  minSpeed?: number;
+  maxSpeed?: number;
+  minDelay?: number;
+  maxDelay?: number;
   starColor?: string;
   trailColor?: string;
   starWidth?: number;
   starHeight?: number;
   className?: string;
-  maxStars?: 1; // optional, untuk batasi jumlah
+  maxStars?: number;
 }
 
+// Posisi dan arah random
 const getRandomStartPoint = () => {
-  const side = Math.floor(Math.random() * 4);
-  const offset = Math.random() * window.innerWidth;
-
-  switch (side) {
-    case 0:
-      return { x: offset, y: 0, angle: 45 };
-    case 1:
-      return { x: window.innerWidth, y: offset, angle: 135 };
-    case 2:
-      return { x: offset, y: window.innerHeight, angle: 225 };
-    case 3:
-      return { x: 0, y: offset, angle: 315 };
-    default:
-      return { x: 0, y: 0, angle: 45 };
-  }
+  const x = Math.random() * window.innerWidth;
+  const y = Math.random() * window.innerHeight;
+  const angle = Math.random() * 360;
+  return { x, y, angle };
 };
 
 export const ShootingStars: React.FC<ShootingStarsProps> = ({
-  minSpeed = 10,
-  maxSpeed = 30,
-  minDelay = 1200,
-  maxDelay = 4200,
+  minSpeed = 0.2,
+  maxSpeed = 0.5,
+  minDelay = 4000,
+  maxDelay = 8000,
   starColor = "#9E00FF",
   trailColor = "#2EB9DF",
-  starWidth = 10,
+  starWidth = 8,
   starHeight = 1,
   className,
-  maxStars = 20, // default maksimal 20 shooting stars
+  maxStars = 5,
 }) => {
   const [stars, setStars] = useState<ShootingStar[]>([]);
   const svgRef = useRef<SVGSVGElement>(null);
 
+  // Gerakan
   useEffect(() => {
-    const createStar = () => {
-      if (stars.length >= maxStars) return;
+    let animationFrame: number;
 
-      const { x, y, angle } = getRandomStartPoint();
-      const newStar: ShootingStar = {
-        id: Date.now() + Math.random(),
-        x,
-        y,
-        angle,
-        scale: 1,
-        speed: Math.random() * (maxSpeed - minSpeed) + minSpeed,
-        distance: 0,
-      };
-
-      setStars((prev) => [...prev, newStar]);
-
-      const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
-      setTimeout(createStar, randomDelay);
-    };
-
-    createStar();
-  }, [stars.length, maxStars, minDelay, maxDelay, minSpeed, maxSpeed]);
-
-  useEffect(() => {
     const moveStars = () => {
       setStars((prevStars) =>
         prevStars
@@ -100,7 +69,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
               newY < -50 ||
               newY > window.innerHeight + 50
             ) {
-              return null;
+              return null; // hapus yang keluar dari layar
             }
 
             return {
@@ -114,11 +83,49 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
           .filter(Boolean) as ShootingStar[]
       );
 
-      requestAnimationFrame(moveStars);
+      animationFrame = requestAnimationFrame(moveStars);
     };
 
-    moveStars();
+    animationFrame = requestAnimationFrame(moveStars);
+    return () => cancelAnimationFrame(animationFrame);
   }, []);
+
+  // Spawn awal + berulang jika kurang dari maxStars
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
+    const spawnStar = () => {
+      setStars((prev) => {
+        if (prev.length >= maxStars) return prev;
+
+        const { x, y, angle } = getRandomStartPoint();
+        const newStar: ShootingStar = {
+          id: Date.now() + Math.random(),
+          x,
+          y,
+          angle,
+          scale: 1,
+          speed: Math.random() * (maxSpeed - minSpeed) + minSpeed,
+          distance: 0,
+        };
+
+        return [...prev, newStar];
+      });
+
+      const delay = Math.random() * (maxDelay - minDelay) + minDelay;
+      timeoutId = setTimeout(spawnStar, delay);
+    };
+
+    // Jalankan spawner terus menerus
+    const loopSpawner = () => {
+      spawnStar();
+      timeoutId = setTimeout(loopSpawner, 1000); // cek setiap 1 detik
+    };
+
+    loopSpawner();
+
+    return () => clearTimeout(timeoutId);
+  }, [minSpeed, maxSpeed, minDelay, maxDelay, maxStars]);
 
   return (
     <svg
@@ -130,7 +137,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
           key={star.id}
           x={star.x}
           y={star.y}
-          width={starWidth * star.scale}
+          width={starWidth * star.scale * 3}
           height={starHeight}
           fill="url(#gradient)"
           transform={`rotate(${star.angle}, ${
