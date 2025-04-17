@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.className,
-          "flex antialiased h-screen overflow-hidden relative m-0 p-0"
+          "flex antialiased h-screen relative m-0 p-0 overflow-xhidden"
         )}
       >
         {/* Stars background di belakang semua */}

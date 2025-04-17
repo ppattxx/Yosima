@@ -41,10 +41,10 @@ export default function About() {
       </div>
 
       <div className="max-w-4xl">
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 text-stone-400">
           Hey there, I&apos;m Dava Rajif - a passionate developer, visual thinker, and admirer of beautiful digital experiences. Welcome to my corner of the web!
         </Paragraph>
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 text-stone-400">
           Since the beginning of my journey in tech, I&apos;ve been fascinated by how lines of code
           can evolve into intuitive, responsive, and elegant applications. Whether it&apos;s
           building mobile apps with Flutter or crafting pixel-perfect user interfaces with React
@@ -52,24 +52,24 @@ export default function About() {
           functionality with aesthetic charm.
         </Paragraph>
 
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 text-stone-400">
         But development, to me, is more than just writing code it&apos;s about telling a story
         through interaction and flow. Every project is an opportunity to solve problems,
         connect with users, and bring thoughtful design to life. My background in
         working on various apps ranging from e-commerce platforms to educational
         and medical tools has shaped me into someone who values both precision and creativity.
         </Paragraph>
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 text-stone-400">
         What truly sets me apart is my deep appreciation for design. I believe great design isn&apos;t
         just about how things look, but how they feel. That belief guides every product I touch ensuring
         it&apos;s not only smooth and functional, but visually pleasing and intuitive.
         </Paragraph>
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 text-stone-400">
         Through this site, I&apos;m excited to share my projects, insights, and maybe a bit of inspiration.
         Whether you&apos;re a fellow developer, a designer, or someone simply curious about the intersection
         of code and creativity—I hope you find something here that sparks your interest.
         </Paragraph>
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 text-stone-400">
         Let&apos;s create, explore, and push boundaries together. Thanks for stopping by this is just the beginning of our journey.
         </Paragraph>
       </div>

@@ -52,7 +52,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           </button>
         ))}
       </div>
-      <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
+      <div className="flex lg:flex-row justify-between items-center flex-col mt-10 text-stone-300">
         <Heading className="font-black mb-2 pb-1"> {product.title}</Heading>
         <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
           {product.stack?.map((stack: string) => (
@@ -66,9 +66,9 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         </div>
       </div>
       <div>
-        <Paragraph className="max-w-xl mt-4">{product.description}</Paragraph>
+        <Paragraph className="max-w-xl mt-4 text-stone-400">{product.description}</Paragraph>
       </div>
-      <div className="prose prose-sm md:prose-base max-w-none text-neutral-600">
+      <div className="prose prose-sm md:prose-base max-w-none text-stone-400">
         {product?.content}
       </div>
 
@@ -79,17 +79,17 @@ export const SingleProduct = ({ product }: { product: Product }) => {
       >
         Live Preview
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"
-        >
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"
+          >
           <path d="M5 12l14 0"></path>
           <path d="M13 18l6 -6"></path>
           <path d="M13 6l6 6"></path>

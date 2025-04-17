@@ -5,14 +5,16 @@ import { Paragraph } from "@/components/Paragraph";
 import { Products } from "@/components/Products";
 import { Metadata } from "next";
 import Image from "next/image";
-
 import { motion } from "framer-motion";
 import About from "@/components/About";
 
+// Import the star background and shooting stars components
+import { ShootingStars } from "@/components/ui/shooting-stars";  // Make sure path is correct
+import { StarsBackground } from "@/components/ui/stars-background";  // Make sure path is correct
+
 export const metadata: Metadata = {
   title: "About | Dava Rajif",
-  description:
-    "",
+  description: "",
 };
 
 export default function AboutPage() {
@@ -22,11 +24,29 @@ export default function AboutPage() {
     "https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
     "https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
   ];
+
   return (
-    <Container>
-      <span className="text-4xl">💬</span>
-      <Heading className="font-black">About Me</Heading>
-      <About />
-    </Container>
+    <div className="relative bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center">
+      {/* Background stars */}
+      <StarsBackground
+        starDensity={0.00015} // Adjust the density as per your needs
+        allStarsTwinkle={true}
+        twinkleProbability={0.7}
+        minTwinkleSpeed={0.5}
+        maxTwinkleSpeed={1}
+        className="absolute inset-0 z-0 pointer-events-none"
+      />
+
+      {/* Shooting stars effect */}
+      <ShootingStars
+        className="absolute inset-0 z-0 pointer-events-none"
+      />
+
+      <Container>
+        <span className="text-4xl">💬</span>
+        <Heading className="font-black">About Me</Heading>
+        <About />
+      </Container>
+    </div>
   );
 }

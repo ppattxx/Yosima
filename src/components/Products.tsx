@@ -39,7 +39,7 @@ export const Products = () => {
                 <div className="flex flex-col justify-between w-full">
                   <Heading
                     as="h4"
-                    className="font-bold text-sm sm:text-base text-stone-400"
+                    className="text-left text-sm sm:text-base text-stone-400 font-light"
                   >
                     {product.title}
                   </Heading>

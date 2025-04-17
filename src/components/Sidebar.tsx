@@ -10,7 +10,7 @@ import { Heading } from "./Heading";
 import { socials } from "@/constants/socials";
 import { Badge } from "./Badge";
 import { AnimatePresence, motion } from "framer-motion";
-import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
+import { IconLayoutSidebarLeftCollapse, IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
 import { isMobile } from "@/lib/utils";
 import { StarsBackground } from "@/components/ui/stars-background"; // pastikan path benar
 import { ShootingStars } from "@/components/ui/shooting-stars";  // Pastikan path sesuai
@@ -19,7 +19,7 @@ export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
 
   return (
-    <div className="relative bg-gray-900 text-white h-screen flex flex-col items-center justify-center">
+    <div className="relative bg-gray-900 text-white h-screen">
       {/* Stars Background */}
       <StarsBackground
         starDensity={0.00015}
@@ -31,38 +31,41 @@ export const Sidebar = () => {
       />
 
       <ShootingStars
-          className="absolute inset-0 z-0 pointer-events-none" // Tambahkan z-index rendah dan pointer-events-none
-        />
+        className="absolute inset-0 z-0 pointer-events-none"
+      />
 
-      {/* Sidebar Content */}
-      <div className="relative z-10 w-full">
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              initial={{ x: -200 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.2, ease: "linear" }}
-              exit={{ x: -200 }}
-              className="px-6 z-[100] py-10 bg-white/10 backdrop-blur-sm max-w-[14rem] lg:w-fit fixed lg:relative h-screen left-0 flex flex-col justify-between"
-            >
-              <div className="flex-1 overflow-auto">
-                <SidebarHeader />
-                <Navigation setOpen={setOpen} />
-              </div>
-              <div onClick={() => isMobile() && setOpen(false)}>
-                <Badge href="/resume" text="Read Resume" />
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+      {/* Sidebar Content - Tetap di kiri */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ x: -200 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.2, ease: "linear" }}
+            exit={{ x: -200 }}
+            className="px-6 z-[100] py-10 bg-white/10 backdrop-blur-sm w-56 lg:w-64 fixed h-screen left-0 flex flex-col justify-between border-r border-white/10"
+          >
+            <div className="flex-1 overflow-auto">
+              <SidebarHeader />
+              <Navigation setOpen={setOpen} />
+            </div>
+            <div onClick={() => isMobile() && setOpen(false)}>
+              <Badge href="/resume" text="Read Resume" />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-        <button
-          className="fixed lg:hidden bottom-4 right-4 h-8 w-8 border border-neutral-200 rounded-full backdrop-blur-sm flex items-center justify-center z-50"
-          onClick={() => setOpen(!open)}
-        >
-          <IconLayoutSidebarRightCollapse className="h-4 w-4 text-secondary" />
-        </button>
-      </div>
+      {/* Toggle Button - Dipindah ke kanan bawah */}
+      <button
+        className="fixed bottom-6 right-6 h-12 w-12 rounded-full bg-sky-500 hover:bg-sky-600 flex items-center justify-center z-50 shadow-lg transition-all"
+        onClick={() => setOpen(!open)}
+      >
+        {open ? (
+          <IconLayoutSidebarLeftCollapse className="h-5 w-5 text-white" />
+        ) : (
+          <IconLayoutSidebarRightCollapse className="h-5 w-5 text-white" />
+        )}
+      </button>
     </div>
   );
 };
@@ -123,7 +126,7 @@ export const Navigation = ({
 };
 
 const SidebarHeader = () => {
-  return (
+  return (  
     <div className="flex space-x-2">
       <Image
         src="/images/Profile.png"
