@@ -11,8 +11,8 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 
 // Import the effects components
-import { ShootingStars } from "@/components/ui/shooting-stars"; // Pastikan path sesuai
-import { StarsBackground } from "@/components/ui/stars-background"; // Pastikan path sesuai
+import { ShootingStars } from "@/components/ui/shooting-stars"; 
+import { StarsBackground } from "@/components/ui/stars-background"; 
 
 type Props = {
   params: { slug: string };
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   } else {
     return {
-      title: "Projects | Dava Rajif",
+      title: "Projects | Yosima Karundeng",
       description:
         "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
     };

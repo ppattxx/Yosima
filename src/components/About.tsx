@@ -34,7 +34,7 @@ export default function About() {
               width={200}
               height={600}
               alt="about"
-              className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-80 hover:rotate-0 transition duration-200"
+              className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-40 hover:rotate-0 transition duration-200"
             />
           </motion.div>
         ))}
@@ -42,17 +42,17 @@ export default function About() {
 
       <div className="max-w-4xl">
         <Paragraph className=" mt-4 text-stone-400">
-          Hey there, I&apos;m Dava Rajif - a passionate developer, visual thinker, and admirer of beautiful digital experiences. Welcome to my corner of the web!
+        Welcome! This portfolio brings together a collection of visual work that reflects my growth as a creator.
+        Each project tells a story — from content creation to graphic design built with passion, experimentation,
+        and purpose. Let&apos;s dive into a creative journey shaped by exploration and visual thinking.
         </Paragraph>
         <Paragraph className=" mt-4 text-stone-400">
-          Since the beginning of my journey in tech, I&apos;ve been fascinated by how lines of code
-          can evolve into intuitive, responsive, and elegant applications. Whether it&apos;s
-          building mobile apps with Flutter or crafting pixel-perfect user interfaces with React
-          and Tailwind CSS, I love turning ideas into real, impactful solutions that blend
-          functionality with aesthetic charm.
+        My name is Yosima Karundeng, and I&apos;m a digital visual creator who enjoys blending storytelling with design.
+        With a strong interest in both aesthetics and function, I love working on projects that connect ideas to
+        audiences in engaging ways. I believe creativity is not just a skill it&apos;s a way to communicate meaningfully.
         </Paragraph>
 
-        <Paragraph className=" mt-4 text-stone-400">
+        {/* <Paragraph className=" mt-4 text-stone-400">
         But development, to me, is more than just writing code it&apos;s about telling a story
         through interaction and flow. Every project is an opportunity to solve problems,
         connect with users, and bring thoughtful design to life. My background in
@@ -71,7 +71,7 @@ export default function About() {
         </Paragraph>
         <Paragraph className=" mt-4 text-stone-400">
         Let&apos;s create, explore, and push boundaries together. Thanks for stopping by this is just the beginning of our journey.
-        </Paragraph>
+        </Paragraph> */}
       </div>
     </div>
   );

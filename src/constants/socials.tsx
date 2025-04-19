@@ -1,4 +1,6 @@
 import {
+  IconBrandBumble,
+  IconBrandGmail,
   IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandTwitter,
@@ -7,18 +9,18 @@ import {
 
 export const socials = [
   {
-    href: "https://instagram.com/acahyadvaa",
+    href: "https://instagram.com/yosiima",
     label: "Instagram",
     icon: IconBrandInstagram,
   },
-  // {
-  //   href: "https://linkedin.com/in/manuarora28",
-  //   label: "LinkedIn",
-  //   icon: IconBrandLinkedin,
-  // },
-  // {
-  //   href: "https://youtube.com/maninthere",
-  //   label: "YouTube",
-  //   icon: IconBrandYoutube,
-  // },
+  {
+    href: "https://linkedin.com/in/yosimakarundeng",
+    label: "Linkedin",
+    icon: IconBrandLinkedin,
+  },
+  {
+    href: "mailto:yosimakarundeng29@gmail.com",
+    label: "Gmail",
+    icon: IconBrandGmail,
+  },
 ];

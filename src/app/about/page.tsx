@@ -13,7 +13,7 @@ import { ShootingStars } from "@/components/ui/shooting-stars";  // Make sure pa
 import { StarsBackground } from "@/components/ui/stars-background";  // Make sure path is correct
 
 export const metadata: Metadata = {
-  title: "About | Dava Rajif",
+  title: "About | Yosima Karundeng",
   description: "",
 };
 

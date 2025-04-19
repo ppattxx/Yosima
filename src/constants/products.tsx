@@ -11,7 +11,7 @@ import SmilearnMob2 from "/public/images/SmilearnMob2.png";
 export const products = [
   {
     href: "https://smilearn.agileteknik.com",
-    title: "Smilearn",
+    title: "Social Media Design Fifa Gym",
     description:
       "A design and development studio that focuses on building quality apps.",
     thumbnail: Smilearn,
@@ -41,7 +41,7 @@ export const products = [
   },
   {
     href: "https://play.google.com/store/apps/details?id=com.b4.smilearn&hl=en",
-    title: "Smilearn Mobile App",
+    title: "Social Media Design Glowstep",
     description:
       "Practice for technical interviews with hands on coding challenges.",
     thumbnail: SmilearnMob2,
@@ -71,7 +71,7 @@ export const products = [
   },
   {
     href: "https://gomoonbeam.com",
-    title: "Moonbeam",
+    title: "Visual Communication Design Project",
     description:
       "Never write from scratch again with Moonbeam, your AI first writing tool",
     thumbnail: sidefolioMoonbeam,
@@ -101,7 +101,7 @@ export const products = [
   },
   {
     href: "https://tailwindmasterkit.com",
-    title: "Tailwind Master Kit",
+    title: "Content Creation",
     description:
       "A beautiful and comprehensive Tailwind CSS components library for building modern websites and applications.",
     thumbnail: sidefolioTailwindMasterKit,

@@ -28,14 +28,14 @@ export default function Home() {
 
   <Container>
     <span className="text-4xl">👋</span>
-    <Heading className="font-black text-stone-400">Hello there! I&apos;m Dava</Heading>
+    <Heading className="font-black text-stone-400">Hello there! I&apos;m Yosi</Heading>
     <Paragraph className="max-w-xl mt-4 text-stone-400">
-      I&apos;m a front-end developer passionate about{" "}
-      <Highlight>building mobile and web apps</Highlight> bringing real impact.
+      I&apos;m a graphic designer passionate about{" "}
+      <Highlight>crafting visuals and brand identities</Highlight> that leave a lasting impression.
     </Paragraph>
     <Paragraph className="max-w-xl mt-4 text-stone-400">
-      I&apos;ve built various projects using Flutter, Java, and modern web stacks like React and Tailwind.{" "}
-      I love crafting clean, responsive UI and collaborating in agile teams to create meaningful digital products.
+      I&apos;ve worked on a variety of design projects including logos, posters, UI/UX mockups, and social media content.{" "}
+      I thrive on blending creativity with strategy to deliver clean, compelling, and purpose-driven designs.
     </Paragraph>
     <Heading as="h2" className="font-black text-lg md:text-lg lg:text-lg mt-20 mb-4 text-stone-400">
       What I&apos;ve been working on

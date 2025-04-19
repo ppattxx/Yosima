@@ -69,7 +69,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
               newY < -50 ||
               newY > window.innerHeight + 50
             ) {
-              return null; // hapus yang keluar dari layar
+              return null;
             }
 
             return {

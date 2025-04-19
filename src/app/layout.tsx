@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
-import { Footer } from "@/components/Footer";
+// import { Footer } from "@/components/Footer";
 import { StarsBackground } from "@/components/ui/stars-background";
 
 const inter = Inter({
@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Dava Rajif - Developer",
+  title: "Yosima Karundeng - Graphic Designer",
   description: "",
 };
 
@@ -39,7 +39,7 @@ export default function RootLayout({
         <div className="flex-1 overflow-y-auto relative z-10">
           <div className="min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 backdrop-blur-sm bg-black/30">
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </div>
       </body>
