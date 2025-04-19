@@ -127,14 +127,15 @@ export const Navigation = ({
 
 const SidebarHeader = () => {
   return (  
-    <div className="flex space-x-2">
-      <Image
-        src="/images/yosi-circle.png"
-        alt="Avatar"
-        height="40"
-        width="40"
-        className="object-cover object-top rounded-full flex-shrink-0"
-      />
+    <div className="flex space-x-2 items-center">
+  <Image
+    src="/images/yosi-circle.png"
+    alt="Avatar"
+    width={0}
+    height={0}
+    sizes="(max-width: 768px) 32px, 40px"
+    className="w-10 h-10 md:w-12 md:h-12 object-cover object-top rounded-full flex-shrink-0"
+  />
       <div className="flex text-sm flex-col">
         <p className="font-bold text-white">Yosima Karundeng</p>
         <p className="font-light text-secondary">Graphic Designer</p>
