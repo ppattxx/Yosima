@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 
 export default function About() {
   const images = [
-    "/images/Mobile.png",
-    "/images/Redis.png",
-    "/images/Quiz.png",
-    "/images/Scater.png",
+    "/images/Yamaha1.png",
+    "/images/Glowstep3.png",
+    "/images/Glowstep1.png",
+    "/images/Yamaha2.png",
   ];
   return (
     <div>

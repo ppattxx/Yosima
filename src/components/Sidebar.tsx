@@ -48,9 +48,9 @@ export const Sidebar = () => {
               <SidebarHeader />
               <Navigation setOpen={setOpen} />
             </div>
-            <div onClick={() => isMobile() && setOpen(false)}>
+            {/* <div onClick={() => isMobile() && setOpen(false)}>
               <Badge href="/resume" text="Read Resume" />
-            </div>
+            </div> */}
           </motion.div>
         )}
       </AnimatePresence>
@@ -129,7 +129,7 @@ const SidebarHeader = () => {
   return (  
     <div className="flex space-x-2 items-center">
   <Image
-    src="/images/yosi-circle.png"
+    src="/images/yosiii.png"
     alt="Avatar"
     width={0}
     height={0}

@@ -30,12 +30,16 @@ export default function Home() {
     <span className="text-4xl">👋</span>
     <Heading className="font-black text-stone-400">Hello there! I&apos;m Yosi</Heading>
     <Paragraph className="max-w-xl mt-4 text-stone-400">
-      I&apos;m a graphic designer passionate about{" "}
-      <Highlight>crafting visuals and brand identities</Highlight> that leave a lasting impression.
+    Welcome to my portfolio a creative platform dedicated to
+    showcasing design <Highlight>excellence and impactful</Highlight> content creation. 
+    As a professional designer and content creator, I am committed 
+    to delivering thoughtful visual solutions and engaging digital experiences tailored to meet diverse needs.{" "}
     </Paragraph>
     <Paragraph className="max-w-xl mt-4 text-stone-400">
-      I&apos;ve worked on a variety of design projects including logos, posters, UI/UX mockups, and social media content.{" "}
-      I thrive on blending creativity with strategy to deliver clean, compelling, and purpose-driven designs.
+    This website serves as both a portfolio and a gateway to my creative services. 
+    Whether you&apos;re a brand seeking strong visual identity, a business in need of content strategy, 
+    or simply looking for creative collaboration, I invite you to explore my work and discover 
+    how we can bring ideas to life together.
     </Paragraph>
     <Heading as="h2" className="font-black text-lg md:text-lg lg:text-lg mt-20 mb-4 text-stone-400">
       What I&apos;ve been working on
