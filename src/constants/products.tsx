@@ -1,18 +1,16 @@
-import sidefolioMoonbeam from "/public/images/sidefolio-moonbeam.png";
-import sidefolioMoonbeam2 from "/public/images/sidefolio-moonbeam-2.png"
-import sidefolioTailwindMasterKit from "/public/images/sidefolio-tailwindmasterkit.png";
-import sidefolioTailwindMasterKit2 from "/public/images/sidefolio-tailwindmasterkit-2.png";
-import Smilearn from "/public/images/Smilearn.png";
-import Smilearn2 from "/public/images/Smilearn2.png";
+import Poster from "/public/images/poster.png";
+import Poster2 from "/public/images/poster2.png";
 import SmilearnMob from "/public/images/SmilearnMob.png";
 import SmilearnMob2 from "/public/images/SmilearnMob2.png";
 import Feed1 from "/public/images/feed1.png";
 import Feed2 from "/public/images/feed2.png";
+import Content2 from "/public/images/content2.png";
+import Content from "/public/images/content.png";
 
 
 export const products = [
   {
-    href: "https://drive.google.com/drive/folders/1yWr7RhDLiMCHsKvrm2Nu8wo_beqlMYFa",
+    href: "https://drive.google.com/drive/folders/15hc7wx7IJjJ_0nL2YIT-0caUt5d6oJBh?usp=sharing",
     title: "Social Media Design",
     description:
       "A social media specialist experienced in managing campaigns, creating engaging content, and growing brand presence across various platforms.",
@@ -51,13 +49,13 @@ export const products = [
     ),
   },
   {
-    href: "https://play.google.com/store/apps/details?id=com.b4.smilearn&hl=en",
+    href: "https://drive.google.com/drive/folders/1KbpKJbWn16YiQ8ozBVZ-5VV9L_k5QHHD?usp=sharing",
     title: "Commercial Poster",
     description:
       "Practice for technical interviews with hands on coding challenges.",
-    thumbnail: SmilearnMob2,
-    images: [SmilearnMob2, SmilearnMob],
-    stack: ["Flutter", "Dart"],
+    thumbnail: Poster,
+    images: [Poster, Poster2],
+    stack: ["Canva", "Photoshop"],
     slug: "algochurn",
     content: (
       <div>
@@ -71,7 +69,7 @@ export const products = [
         professional mindset, simulating the creative process used in real client work.{" "}
         </p>
         <p>
-        For New Era, I designed two different poster concepts that reflect the brand's bold, 
+        For New Era, I designed two different poster concepts that reflect the brand&apos;s bold, 
         urban, and youthful energy. I focused on creating strong visual compositions with 
         dynamic typography, striking imagery, and a color palette that resonated with the brand&apos;s 
         streetwear culture. Each poster was crafted to appeal to the brand&apos;s target audience—young 
@@ -90,13 +88,13 @@ export const products = [
     ),
   },
   {
-    href: "https://gomoonbeam.com",
+    href: "https://drive.google.com/drive/folders/1hfsfxZP975BYEd-HwuLGMzoPyWc_AL8k?usp=sharing",
     title: "Content Creation",
     description:
       "Never write from scratch again with Moonbeam, your AI first writing tool",
-    thumbnail: sidefolioMoonbeam,
-    images: [sidefolioMoonbeam, sidefolioMoonbeam2],
-    stack: ["Nextjs", "Tailwindcss"],
+    thumbnail: Content2,
+    images: [Content2, Content],
+    stack: ["Capcut", "Adobe Premiere"],
     slug: "moonbeam",
     content: (
       <div>
