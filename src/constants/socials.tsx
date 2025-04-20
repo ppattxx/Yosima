@@ -19,8 +19,8 @@ export const socials = [
     icon: IconBrandLinkedin,
   },
   {
-    href: "mailto:yosimakarundeng29@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=yosimakarundeng29@gmail.com",
     label: "Gmail",
     icon: IconBrandGmail,
-  },
+  }  
 ];

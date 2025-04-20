@@ -1,8 +1,8 @@
 export const timeline = [
   {
-    company: "Amazon",
-    title: "Senior Software Engineer",
-    date: "2022 - Present",
+    company: "Fifa Gym Sidoarjo",
+    title: "Social Media Specialist",
+    // date: "2022 - Present",
     description: "Building the future of e-commerce",
     responsibilities: [
       "Developed a new feature that improves the shopping experience",
