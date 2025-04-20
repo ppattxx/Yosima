@@ -17,7 +17,7 @@ export const products = [
     thumbnail: Feed1,
     images: [Feed1, Feed2],
     stack: ["Canva", "Photoshop"],
-    slug: "Smilearn",
+    slug: "sosmed",
     content: (
       <div>
         <p>
@@ -56,7 +56,7 @@ export const products = [
     thumbnail: Poster,
     images: [Poster, Poster2],
     stack: ["Canva", "Photoshop"],
-    slug: "algochurn",
+    slug: "commercial",
     content: (
       <div>
         <p>
@@ -95,7 +95,7 @@ export const products = [
     thumbnail: Content2,
     images: [Content2, Content],
     stack: ["Capcut", "Adobe Premiere"],
-    slug: "moonbeam",
+    slug: "content",
     content: (
       <div>
         <p>
