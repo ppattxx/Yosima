@@ -52,7 +52,7 @@ export const products = [
     href: "https://drive.google.com/drive/folders/1KbpKJbWn16YiQ8ozBVZ-5VV9L_k5QHHD?usp=sharing",
     title: "Commercial Poster",
     description:
-      "Practice for technical interviews with hands on coding challenges.",
+      "",
     thumbnail: Poster,
     images: [Poster, Poster2],
     stack: ["Canva", "Photoshop"],
@@ -91,7 +91,7 @@ export const products = [
     href: "https://drive.google.com/drive/folders/1hfsfxZP975BYEd-HwuLGMzoPyWc_AL8k?usp=sharing",
     title: "Content Creation",
     description:
-      "Never write from scratch again with Moonbeam, your AI first writing tool",
+      "",
     thumbnail: Content2,
     images: [Content2, Content],
     stack: ["Capcut", "Adobe Premiere"],
